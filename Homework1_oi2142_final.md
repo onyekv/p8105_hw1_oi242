@@ -25,16 +25,16 @@ Creating a data frame using Tibble
     ## # A tibble: 10 × 4
     ##    vec_numeric vec_char vec_logical vec_factor
     ##          <dbl> <chr>    <chr>       <fct>     
-    ##  1      -0.133 Wendy    TRUE        work      
-    ##  2      -0.618 Kevin    TRUE        home      
-    ##  3       1.67  Fred     TRUE        mobile    
-    ##  4       1.90  Jeff     FALSE       work      
-    ##  5       0.482 Leslie   TRUE        home      
-    ##  6       0.726 Jen      TRUE        mobile    
-    ##  7      -1.24  Michelle TRUE        work      
-    ##  8       2.59  Emily    FALSE       home      
-    ##  9       0.133 Jake     TRUE        mobile    
-    ## 10       0.903 Sam      TRUE        home
+    ##  1      0.0598 Wendy    TRUE        work      
+    ##  2     -0.539  Kevin    TRUE        home      
+    ##  3      1.10   Fred     TRUE        mobile    
+    ##  4      3.21   Jeff     FALSE       work      
+    ##  5     -0.271  Leslie   TRUE        home      
+    ##  6     -0.440  Jen      TRUE        mobile    
+    ##  7     -0.160  Michelle TRUE        work      
+    ##  8     -0.610  Emily    FALSE       home      
+    ##  9      0.982  Jake     TRUE        mobile    
+    ## 10     -0.544  Sam      TRUE        home
 
 ## Taking the mean using the pull function
 
@@ -42,7 +42,7 @@ Creating a data frame using Tibble
 mean(pull (homework1_df, var = vec_numeric))
 ```
 
-    ## [1] 0.6418024
+    ## [1] 0.2788676
 
 ``` r
 mean(pull(homework1_df, var = vec_char))
@@ -73,8 +73,9 @@ mean(pull(homework1_df, var = vec_factor))
 
 ## 
 
-Taking the mean for the numeric variable in the data fram worked, but
-taking the mean for the logical, character, and factor did not work.
+Taking the mean for the numeric variable in the data frame worked, but
+taking the mean for the logical, character, and factor variables did not
+work.
 
 # Using the as.numeric function to convert variable
 
@@ -95,3 +96,48 @@ mean(y)
 z <- as.numeric(pull(homework1_df, vec_logical))
 mean(z)
 ```
+
+# Problem 2
+
+Penguins Dataset
+
+``` r
+data("penguins", package = "palmerpenguins")
+```
+
+\[Using view, ncol, and nrow in the console\]
+
+The dataset ‘penguins’ has 344 observations and 8 variables. Using ncol
+= 8 and nrow = 344. The variables include:
+
+(3)Species: Adele, Chinstrap, Gentoo
+
+(3)Islands: Biscoe, Dream, Torgersen
+
+Bill length, mm
+
+Bill depth, mm
+
+Flipper length, mm
+
+Body Mass, g
+
+Sex: M/F
+
+Year, 2007 -2009
+
+The mean flipper length is 201 mm.
+
+## 
+
+Creating scatterplot ‘penguinplot’ using ggplot, with color
+
+Saving scatter plot
+
+Exporting scatterplot into a PDF file
+
+    ## Saving 7 x 5 in image
+
+    ## Warning: Removed 2 rows containing missing values (geom_point).
+
+![](Homework1_oi2142_final_files/figure-gfm/Print%20Plot-1.png)<!-- -->
