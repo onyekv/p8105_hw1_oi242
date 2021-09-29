@@ -5,9 +5,54 @@ output: github_document
 
 # Attaching Tidyverse
 
-```{r setup, include=FALSE}
+```{r setup}
 library (tidyverse)
 ```
 
 # Problem 1: 
 
+Creating a data frame using Tibble
+
+```{r dataframe_tibble, echo=FALSE}
+  homework1_df = tibble (
+    vec_numeric = rnorm(10)
+,    vec_char = c("Wendy", "Kevin", "Fred", "Jeff", "Leslie", "Jen", "Michelle", "Emily", "Jake", "Sam"),
+    vec_logical = c("TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE"),
+    vec_factor = factor (c("work", "home", "mobile", "work", "home", "mobile", "work", "home", "mobile", "home")))
+```
+
+
+```{r print tibble, echo=FALSE}
+homework1_df
+```
+
+## Taking the mean using the pull function 
+
+
+```{r means using pull}
+mean(pull (homework1_df, var = vec_numeric))
+mean(pull(homework1_df, var = vec_char))
+mean(pull(homework1_df, var = vec_logical))
+mean(pull(homework1_df, var = vec_factor))
+```
+
+## 
+
+  Taking the mean for the numeric variable in the data fram worked, but taking the mean for the     logical,  character, and factor did not work.
+
+
+# Using the as.numeric function to convert variable
+  I believe that the as.numeric function worked for vec_factor because this variable has a has 3 different "levels". The numbers assigned are now coded as 1,2, or 3. 
+  
+  When trying to convert vec_char and vec_logistical, I get a warning message that says "NAs introduced by coercion". #
+  
+```{r As Numeric Function, eval=FALSE}
+x <- as.numeric(pull(homework1_df, vec_factor))
+mean(x)
+
+y <- as.numeric(pull(homework1_df, vec_char))
+mean(y)
+
+z <- as.numeric(pull(homework1_df, vec_logical))
+mean(z)
+```
