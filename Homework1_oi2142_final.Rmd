@@ -1,0 +1,13 @@
+---
+title: "Homework 1, Onyeka Isamah"
+output: github_document
+---
+
+# Attaching Tidyverse
+
+```{r setup, include=FALSE}
+library (tidyverse)
+```
+
+# Problem 1: 
+
