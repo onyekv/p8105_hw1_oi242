@@ -15,7 +15,7 @@ library (tidyverse)
   Creating a data frame using Tibble
 
 ```{r dataframe_tibble, echo=FALSE}
-  homework1_df = tibble (
+    homework1_df = tibble (
     vec_numeric = rnorm(10)
 ,   vec_char = c("Wendy", "Kevin", "Fred", "Jeff", "Leslie", "Jen", "Michelle", "Emily", "Jake", "Sam"),
     vec_logical = c("TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE", "TRUE", "FALSE", "TRUE", "TRUE"),
@@ -48,6 +48,7 @@ library (tidyverse)
   When trying to convert vec_char and vec_logistical, I get a warning message that says "NAs introduced by coercion". #
   
 ```{r As Numeric Function, eval=FALSE}
+
   x <- as.numeric(pull(homework1_df, vec_factor))
   mean(x)
 
@@ -100,6 +101,7 @@ library (tidyverse)
   Exporting scatterplot into a PDF file
 
 ```{r Scatterplot, echo=FALSE, warning=FALSE}
+
   penguinplot <- ggplot (penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
 
   ggsave(penguinplot, filename = "penguinplot.pdf")
