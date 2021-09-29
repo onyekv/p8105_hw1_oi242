@@ -25,27 +25,27 @@ Creating a data frame using Tibble
     ## # A tibble: 10 × 4
     ##    vec_numeric vec_char vec_logical vec_factor
     ##          <dbl> <chr>    <chr>       <fct>     
-    ##  1      0.0598 Wendy    TRUE        work      
-    ##  2     -0.539  Kevin    TRUE        home      
-    ##  3      1.10   Fred     TRUE        mobile    
-    ##  4      3.21   Jeff     FALSE       work      
-    ##  5     -0.271  Leslie   TRUE        home      
-    ##  6     -0.440  Jen      TRUE        mobile    
-    ##  7     -0.160  Michelle TRUE        work      
-    ##  8     -0.610  Emily    FALSE       home      
-    ##  9      0.982  Jake     TRUE        mobile    
-    ## 10     -0.544  Sam      TRUE        home
+    ##  1      -0.549 Wendy    TRUE        work      
+    ##  2       1.89  Kevin    TRUE        home      
+    ##  3       0.613 Fred     TRUE        mobile    
+    ##  4      -0.161 Jeff     FALSE       work      
+    ##  5      -0.373 Leslie   TRUE        home      
+    ##  6      -0.845 Jen      TRUE        mobile    
+    ##  7      -0.877 Michelle TRUE        work      
+    ##  8       0.665 Emily    FALSE       home      
+    ##  9       2.04  Jake     TRUE        mobile    
+    ## 10       0.146 Sam      TRUE        home
 
 ## Taking the mean using the pull function
 
 ``` r
-mean(pull (homework1_df, var = vec_numeric))
+  mean(pull (homework1_df, var = vec_numeric))
 ```
 
-    ## [1] 0.2788676
+    ## [1] 0.2548579
 
 ``` r
-mean(pull(homework1_df, var = vec_char))
+  mean(pull(homework1_df, var = vec_char))
 ```
 
     ## Warning in mean.default(pull(homework1_df, var = vec_char)): argument is not
@@ -54,7 +54,7 @@ mean(pull(homework1_df, var = vec_char))
     ## [1] NA
 
 ``` r
-mean(pull(homework1_df, var = vec_logical))
+  mean(pull(homework1_df, var = vec_logical))
 ```
 
     ## Warning in mean.default(pull(homework1_df, var = vec_logical)): argument is not
@@ -63,7 +63,7 @@ mean(pull(homework1_df, var = vec_logical))
     ## [1] NA
 
 ``` r
-mean(pull(homework1_df, var = vec_factor))
+  mean(pull(homework1_df, var = vec_factor))
 ```
 
     ## Warning in mean.default(pull(homework1_df, var = vec_factor)): argument is not
@@ -87,14 +87,14 @@ When trying to convert vec\_char and vec\_logistical, I get a warning
 message that says “NAs introduced by coercion”. \#
 
 ``` r
-x <- as.numeric(pull(homework1_df, vec_factor))
-mean(x)
+  x <- as.numeric(pull(homework1_df, vec_factor))
+  mean(x)
 
-y <- as.numeric(pull(homework1_df, vec_char))
-mean(y)
+  y <- as.numeric(pull(homework1_df, vec_char))
+  mean(y)
 
-z <- as.numeric(pull(homework1_df, vec_logical))
-mean(z)
+  z <- as.numeric(pull(homework1_df, vec_logical))
+  mean(z)
 ```
 
 # Problem 2
@@ -102,7 +102,7 @@ mean(z)
 Penguins Dataset
 
 ``` r
-data("penguins", package = "palmerpenguins")
+  data("penguins", package = "palmerpenguins")
 ```
 
 \[Using view, ncol, and nrow in the console\]
