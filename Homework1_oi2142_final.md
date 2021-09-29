@@ -25,6 +25,7 @@ Creating a data frame using Tibble
     ## # A tibble: 10 × 4
     ##    vec_numeric vec_char vec_logical vec_factor
     ##          <dbl> <chr>    <chr>       <fct>     
+<<<<<<< HEAD
     ##  1      0.0598 Wendy    TRUE        work      
     ##  2     -0.539  Kevin    TRUE        home      
     ##  3      1.10   Fred     TRUE        mobile    
@@ -35,6 +36,18 @@ Creating a data frame using Tibble
     ##  8     -0.610  Emily    FALSE       home      
     ##  9      0.982  Jake     TRUE        mobile    
     ## 10     -0.544  Sam      TRUE        home
+=======
+    ##  1      -1.11  Wendy    TRUE        work      
+    ##  2      -0.979 Kevin    TRUE        home      
+    ##  3      -0.782 Fred     TRUE        mobile    
+    ##  4       1.51  Jeff     FALSE       work      
+    ##  5       0.632 Leslie   TRUE        home      
+    ##  6      -0.711 Jen      TRUE        mobile    
+    ##  7      -0.810 Michelle TRUE        work      
+    ##  8      -1.68  Emily    FALSE       home      
+    ##  9       0.158 Jake     TRUE        mobile    
+    ## 10       1.63  Sam      TRUE        home
+>>>>>>> 690bb302f619757c63e6ed6e15f0b02a3aa26a02
 
 ## Taking the mean using the pull function
 
@@ -42,7 +55,11 @@ Creating a data frame using Tibble
 mean(pull (homework1_df, var = vec_numeric))
 ```
 
+<<<<<<< HEAD
     ## [1] 0.2788676
+=======
+    ## [1] -0.214396
+>>>>>>> 690bb302f619757c63e6ed6e15f0b02a3aa26a02
 
 ``` r
 mean(pull(homework1_df, var = vec_char))

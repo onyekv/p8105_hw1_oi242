@@ -3,6 +3,7 @@ title: "Homework 1, Onyeka Isamah"
 output: github_document
 ---
 
+
 # Attaching Tidyverse
 
 ```{r setup}
@@ -100,12 +101,8 @@ data("penguins", package = "palmerpenguins")
 
 ```{r Scatterplot, echo=FALSE, warning=FALSE}
 penguinplot <- ggplot (penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
-
 ggsave(penguinplot, filename = "penguinplot.pdf")
 ```
-
 ```{r Print Plot, echo=FALSE}
 penguinplot
 ```
-
-
